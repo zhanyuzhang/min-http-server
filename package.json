@@ -1,0 +1,27 @@
+{
+  "name": "min-http-server",
+  "version": "1.0.4",
+  "description": "A simple http server which start at random port",
+  "bin": {
+    "min-http-server": "./index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "http-server",
+    "node server"
+  ],
+  "author": "chesszhang",
+  "license": "MIT",
+  "dependencies": {
+    "chess-http-server": "^1.0.0",
+    "global": "^4.3.2",
+    "koa": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
+  }
+}
