@@ -14,8 +14,8 @@ min-http-server
 
 这时候如果有如下提示，则说明成功启动了：
 ```
-    [tiny-http-server] static-server is starting at port 1295
-    [tiny-http-server] please enter localhost:1295 in the browser
+    [min-http-server] static-server is starting at port 1295
+    [min-http-server] please enter localhost:1295 in the browser
 ```
 
 ### 注意
