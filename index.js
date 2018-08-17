@@ -46,7 +46,7 @@ app.use( async ( ctx ) => {
 })
 
 app.listen(port, () => {
-  console.log(`    [tiny-http-server] static-server is starting at port ${port}`)
-  console.log(`    [tiny-http-server] please enter localhost:${port} in the browser`)
+  console.log(`    [min-http-server] static-server is starting at port ${port}`)
+  console.log(`    [min-http-server] please enter localhost:${port} in the browser`)
 })
 
