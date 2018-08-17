@@ -37,6 +37,7 @@ async function content( ctx, fullStaticPath ) {
 
     } else {
       // 如果请求为文件，则读取文件内容
+      console.log(reqPath);
       content = file( reqPath )
     }
   }

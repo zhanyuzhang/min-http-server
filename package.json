@@ -1,6 +1,6 @@
 {
   "name": "min-http-server",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A simple http server which start at random port",
   "bin": {
     "min-http-server": "./index.js"

@@ -6,9 +6,9 @@ const content = require('./util/content')
 const mimes = require('./util/mimes')
 
 const app = new Koa()
-const port = parseInt(Math.random() * 1000 + 1000)
+const port = 3002
 
-// 静态资源目录对于相对入口文件index.js的路径
+// 静态资源就是当前的进程所有目录
 const staticPath = process.cwd();
 
 // 解析资源类型
@@ -37,7 +37,7 @@ app.use( async ( ctx ) => {
   if ( _mime && _mime.indexOf('image/') >= 0 ) {
     // 如果是图片，则用node原生res，输出二进制数据
     ctx.res.writeHead(200)
-    ctx.res.write(_content, 'binary')
+    ctx.res.write(_content, 'buffer')
     ctx.res.end()
   } else {
     // 其他则输出文本
