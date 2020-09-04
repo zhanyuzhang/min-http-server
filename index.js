@@ -22,6 +22,7 @@ app.use( async ( ctx ) => {
   // 静态资源目录在本地的绝对路径
   let fullStaticPath = staticPath
 
+  // prevent directory traversal (预防漏洞)
   if (ctx.request.url.includes('..')) {
     ctx.res.writeHead(403)
     let message = '<h2>Forbidden</h2><p>The requested file cannot be accessed.</p>'
