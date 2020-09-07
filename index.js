@@ -22,6 +22,14 @@ app.use( async ( ctx ) => {
   // 静态资源目录在本地的绝对路径
   let fullStaticPath = staticPath
 
+  // prevent directory traversal (预防漏洞)
+  if (ctx.request.url.includes('..')) {
+    ctx.res.writeHead(403)
+    let message = '<h2>Forbidden</h2><p>The requested file cannot be accessed.</p>'
+    ctx.res.write(message, 'buffer')
+    ctx.res.end()
+  }
+
   // 获取静态资源内容，有可能是文件内容，目录，或404
   let _content = await content( ctx, fullStaticPath )
 
